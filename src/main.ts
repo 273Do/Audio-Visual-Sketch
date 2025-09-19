@@ -1,13 +1,5 @@
 import p5 from "p5";
 
-const sketch = (p: p5) => {
-  p.setup = () => {
-    p.createCanvas(400, 400);
-  };
+import { dotAndLine } from "./practice/dotAndLine";
 
-  p.draw = () => {
-    p.background(220);
-  };
-};
-
-new p5(sketch);
+new p5(dotAndLine);
