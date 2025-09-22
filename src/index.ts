@@ -1,8 +1,9 @@
 import * as audioModule from "./audio";
 import { SCREEN } from "./constants";
 import { setupControls } from "./controls";
-import { DALDraw, DALSetup } from "./sketches/dotAndLine";
 import { drawVisualization } from "./sketches/audioVisualization";
+import { DALDraw, DALSetup } from "./sketches/dotAndLine";
+import { noiseDraw, noiseSetup } from "./sketches/noise";
 
 export const preload = () => {
   audioModule.preload();
@@ -38,12 +39,12 @@ export const setup = () => {
   // Initial canvas size adjustment
   resize();
 
-  DALSetup();
+  noiseSetup();
 };
 
 export const draw = () => {
   // 指定したスケッチの描画
   // Draw the specified sketch
   // drawVisualization();
-  DALDraw();
+  noiseDraw();
 };
