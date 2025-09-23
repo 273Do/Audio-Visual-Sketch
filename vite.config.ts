@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/audio-visual-sketch/",
+  base: "/p5-practice/",
 });
