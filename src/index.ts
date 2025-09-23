@@ -4,6 +4,7 @@ import { setupControls } from "./controls";
 import { drawVisualization } from "./sketches/audioVisualization";
 import { DALDraw, DALSetup } from "./sketches/dotAndLine";
 import { noiseDraw, noiseSetup } from "./sketches/noise";
+import { RWDraw, RWSetup } from "./sketches/randomWork";
 
 export const preload = () => {
   audioModule.preload();
@@ -39,12 +40,12 @@ export const setup = () => {
   // Initial canvas size adjustment
   resize();
 
-  noiseSetup();
+  RWSetup();
 };
 
 export const draw = () => {
   // 指定したスケッチの描画
   // Draw the specified sketch
   // drawVisualization();
-  noiseDraw();
+  RWDraw();
 };
