@@ -5,6 +5,7 @@ import { drawVisualization } from "./sketches/audioVisualization";
 import { DALDraw, DALSetup } from "./sketches/dotAndLine";
 import { noiseDraw, noiseSetup } from "./sketches/noise";
 import { RWDraw, RWSetup } from "./sketches/randomWork";
+import { TILEDraw, TILESetup } from "./sketches/tile";
 
 export const preload = () => {
   audioModule.preload();
@@ -40,12 +41,14 @@ export const setup = () => {
   // Initial canvas size adjustment
   resize();
 
-  RWSetup();
+  // RWSetup();
+  TILESetup();
+  TILEDraw(0, 0, p.width);
 };
 
 export const draw = () => {
   // 指定したスケッチの描画
   // Draw the specified sketch
   // drawVisualization();
-  RWDraw();
+  // RWDraw();
 };
