@@ -4,6 +4,7 @@ import { setupControls } from "./controls";
 import { drawVisualization } from "./sketches/audioVisualization";
 import { DALDraw, DALSetup } from "./sketches/dotAndLine";
 import { noiseDraw, noiseSetup } from "./sketches/noise";
+import { PNDrawing, PNSetup } from "./sketches/perlinNoise";
 import { RWDraw, RWSetup } from "./sketches/randomWork";
 import { TILEDraw, TILESetup } from "./sketches/tile";
 
@@ -42,8 +43,10 @@ export const setup = () => {
   resize();
 
   // RWSetup();
-  TILESetup();
-  TILEDraw(0, 0, p.width);
+  // TILESetup();
+  // TILEDraw(0, 0, p.width);
+
+  PNSetup();
 };
 
 export const draw = () => {
@@ -51,4 +54,5 @@ export const draw = () => {
   // Draw the specified sketch
   // drawVisualization();
   // RWDraw();
+  PNDrawing();
 };
